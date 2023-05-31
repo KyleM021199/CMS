@@ -3,14 +3,56 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
+  try{
+    const productData = await Product.findAll({
+    include: [{ model: Category }, { model: Product }],
+        attributes: {
+          include: [
+          [
+            sequelize.literal(
+  
+            ),
+          ],
+        ],
+      },
+    });
+    if (!productData) {
+      res.status(404).json({ message: 'No product found with that id!' });
+      return;
+    }
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
+  try{
+    const productData = await Product.findByPk({
+    include: [{ model: Category }, { model: Product }],
+        attributes: {
+          include: [
+          [
+            sequelize.literal(
+  
+            ),
+          ],
+        ],
+      },
+    });
+    if (!productData) {
+      res.status(404).json({ message: 'No product found with that id!' });
+      return;
+    }
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.post('/', (req, res) => {
