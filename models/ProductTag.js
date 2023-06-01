@@ -13,7 +13,7 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true
     },
-    productId:{
+    product_id:{
       type: DataTypes.INTEGER,
       //Product's id reference
       references:{
@@ -22,7 +22,7 @@ ProductTag.init(
       },
 
     },
-    tagId:{
+    tag_id:{
       type: DataTypes.INTEGER,
        //Tag's id reference
        references:{
