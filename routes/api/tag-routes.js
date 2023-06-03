@@ -39,6 +39,10 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new tag
+  req.body = 
+  {
+    tag_name: req.body.tag_name,
+  }
   Tag.create(req.body)
   .then((tag) => {
     if (req.body.tagIds.length) {
@@ -61,6 +65,10 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
+  req.body = 
+  {
+    tag_name: req.body.tag_name,
+  }  
   Tag.update(req.body, {
     where: {
       id: req.params.id,
