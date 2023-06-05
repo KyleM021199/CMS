@@ -25,7 +25,7 @@
   ## Usage
    Use Insomnia or anything similar to setup the correct routes for the operation you want to perform on the listings.
 
-   Demo Video: https://drive.google.com/file/d/1iGFEASswrXwZJrf8zxNlUduuJfvxYbbR/view
+   Demo Video: https://drive.google.com/file/d/1_J_rx47eAaxgr402CMRF7FQHTk7ImRC0/view
 
   ## Contributing
   N/A
