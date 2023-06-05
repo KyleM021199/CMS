@@ -74,8 +74,8 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-  .then((updatedCategory) => {
-    res.status(200).json(updatedCategory);
+  .then((updatedTag) => {
+    res.status(200).json(updatedTag);
   })
   .catch((err) => res.json(err));  
 });
