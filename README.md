@@ -23,7 +23,7 @@
    run a npm install for all dependent add-ons. Next, login your mysql user and password into a .env file. Then, login to mysql in the terminal and SOURCE the schema.sql. Finally, run a npm seed to get the right information for the tables.
 
   ## Usage
-   Use Insomnia or anything similar to setup the correct routes for the operation you want to preform on the listings.
+   Use Insomnia or anything similar to setup the correct routes for the operation you want to perform on the listings.
 
    Demo Video: https://drive.google.com/file/d/1iGFEASswrXwZJrf8zxNlUduuJfvxYbbR/view
 
