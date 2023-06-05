@@ -62,8 +62,12 @@ router.put('/:id', (req, res) => {
     where: {
       id: req.params.id,
     }
+    
   })
-  
+  .then((updatedCategory) => {
+    res.status(200).json(updatedCategory);
+  })
+  .catch((err) => res.json(err));  
   
 });
 
